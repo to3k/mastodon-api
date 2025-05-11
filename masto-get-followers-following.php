@@ -96,7 +96,12 @@
         }
     }
     preg_match("(link: <(.+?)>; rel=\"next\", <.+?>; rel=\"prev\")is", $GLOBALS['link'], $temp);
-    $api_url = $temp[1];
+    
+    if ($temp[1] && $api_url !== $temp[1]) {
+		$api_url = $temp[1];
+	} else {
+		$api_url = null;
+	}
 
     while(!empty($api_url))
     {
@@ -129,7 +134,13 @@
             }
         }
         preg_match("(link: <(.+?)>; rel=\"next\", <.+?>; rel=\"prev\")is", $GLOBALS['link'], $temp);
-        $api_url = $temp[1];
+
+	if ($temp[1] && $api_url !== $temp[1]) {
+		$api_url = $temp[1];
+	} else {
+		$api_url = null;
+	}
+        
     }
 
 
@@ -168,7 +179,12 @@
         }
     }
     preg_match("(link: <(.+?)>; rel=\"next\", <.+?>; rel=\"prev\")is", $GLOBALS['link'], $temp);
-    $api_url = $temp[1];
+    
+	if ($temp[1] && $api_url !== $temp[1]) {
+		$api_url = $temp[1];
+	} else {
+		$api_url = null;
+	}
 
     while(!empty($api_url))
     {
@@ -201,7 +217,13 @@
             }
         }
         preg_match("(link: <(.+?)>; rel=\"next\", <.+?>; rel=\"prev\")is", $GLOBALS['link'], $temp);
-        $api_url = $temp[1];
+        
+    if ($temp[1] && $api_url !== $temp[1]) {
+		$api_url = $temp[1];
+	} else {
+		$api_url = null;
+	}
+        
     }
 ?>
 
